@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+
+<div class="container show-pic text-center">
+   <h1><%= foundPic.name %></h1>
+   <br>
+   <img class="showImage" src="<%= foundPic.image %>"> 
+   <p><em>Submitted by</em> <%= foundPic.author.username %></p>
+    <div class="edit">
+        <% if(currentUser && foundPic.author.id.equals(currentUser._id)){ %>
+           <a href="/diet/<%= foundPic._id %>/edit" class="btn btn-success">Edit</a>
+       <form id="delete" action="/diet/<%= foundPic._id %>?_method=DELETE" method="POST">
+          <button class="btn btn-danger">Delete</button>  
+       <% } %>
+       
+       </form>
+    </div>
+    <div class="well">
+                <div class="text-right">
+                    <a id="comment-button" class="btn btn-success" href="/diet/<%= foundPic._id %>/comments/new"><i class="fas fa-comment-dots"></i> Add Comment</a>
+                </div>
+                <% foundPic.comments.forEach(function(comment){ %>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 id="author-show"><strong><%= comment.author.username %></strong></h4>
+                            <div id="edit-delete">
+                        <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                                <a id="edit-button" class="btn btn-sm btn-success" href="/diet/<%= foundPic._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                            <form action="/diet/<%= foundPic._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-sm btn-danger">Delete</button>
+                            </form> 
+                         <% } %>
+                            </div>
+                            <h6 id="comment-text"><%= comment.text %></h6>
+                            <span class="date float-right"><%= foundPic.created.toDateString() %></span>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+             <a id="second-comment" class="btn btn-success" href="/diet/<%= foundPic._id %>/comments/new"><i class="fas fa-comment-dots"></i> Add Comment</a>
+</div>
+
+
+<% include ../partials/footer %>

@@ -1,0 +1,17 @@
+<% include ../partials/header %>
+
+<div class="container post-container text-center">
+  <h1 class="results text-center display-4"><i class="fas fa-portrait"></i> Add New Comment to <%= foundPic.name %></h1>
+  <img id="commentPic" class="showImage" src="<%= foundPic.image %>">
+  <form action="/diet/<%= foundPic._id %>/comments" method="POST">
+    <div class="form-group">
+      <input type="text" name="comment[text]" class="form-control" placeholder="Text">
+    </div>
+    <button type="submit" class="btn btn-success btn-block">Submit</button>
+  </form>
+</div>
+
+
+
+
+<% include ../partials/footer %>

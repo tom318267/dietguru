@@ -1,0 +1,360 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.log.btn.btn-success {
+  margin-right: 20px;
+}
+
+.container.section-1.text-center {
+  padding-top: 50px;
+}
+
+h1.text-center.display-1 {
+  font-family: 'Quicksand', sans-serif;
+  color: green;
+}
+
+#happy {
+  color: green;
+}
+
+.fa-smile {
+  position: relative;
+  top: 2px;
+}
+
+.section-2 h2 {
+  text-align: center;
+}
+
+.section-3 h2 {
+  text-align: left;
+}
+
+.steps {
+  display: inline-block;
+}
+
+.plans {
+  display: inline-block;
+}
+
+.bg-light {
+  background-color: transparent!important;
+}
+
+i.fa-apple-alt {
+  font-size: 75px;
+  position: relative;
+  top: -10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: green;
+  font-size: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: orange;
+}
+
+img {
+  width: 100%;
+}
+
+.section-2 {
+  background: green;
+  color: white;
+  margin-top: 50px;
+  padding: 50px;
+}
+
+h2 {
+  padding-top: 20px;
+}
+
+.section-3.text-center {
+  background: #FFA10D;
+  color: white;
+  padding: 50px;
+}
+
+
+nav {
+  padding: 50px;
+}
+
+
+li {
+  display: block;
+}
+
+.col-sm-6 {
+  padding: 40px;
+}
+
+.social {
+  font-size: 30px;
+}
+
+.social a i {
+  margin-right: 20px;
+  color: green;
+}
+
+.social a i:hover {
+  color: orange;
+}
+
+hr {
+  margin-top: -10px;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+#foot ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav#foot a {
+ color: green;
+}
+
+nav#foot a:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+#copy {
+  text-align: center;
+}
+
+#copy ul {
+  padding: 0;
+}
+
+#copy li {
+  color: green;
+  display: inline;
+  margin-right: 15px;
+}
+
+#copy li a {
+  color: green;
+  text-decoration: none;
+}
+
+#copy li a:hover {
+  color: orange;
+}
+
+.fa-check-square {
+  position: relative;
+  top: 3px;
+}
+
+.mobile-login {
+  padding-top: 30px;
+}
+
+.results {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  color: green;
+}
+
+.post-container {
+  padding-bottom: 300px;
+}
+
+form {
+  width: 75%;
+  margin: 0 auto;
+}
+
+textarea {
+  width: 100%;
+}
+
+.post-results {
+   padding-top: 80px;
+   padding-bottom: 30px;
+   color: green;
+}
+
+.results-div {
+  padding-bottom: 100px;
+}
+
+.show-pic {
+  padding: 40px;
+}
+
+.showImage {
+  width: 400px;
+}
+
+.well {
+  padding: 10px;
+  background-color: #fafafa;
+}
+
+#editImage {
+  padding-bottom: 20px;
+}
+
+.edit {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+#edit-button {
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+#delete {
+  display: inline;
+}
+
+#commentPic {
+  padding-bottom: 40px;
+}
+
+#login-name {
+  color: black;
+  margin-right: 15px;
+}
+
+.login-form {
+  padding-top: 50px;
+  padding-bottom: 300px;
+}
+
+#edit-delete {
+  display: inline-flex;
+}
+
+
+
+footer.container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+@media only screen and (max-width: 484px) {
+  h1.text-center.display-1 {
+    font-size: 70px;
+  }
+  
+  i.fa-apple-alt {
+    font-size: 50px;
+  }
+  
+  i.fa-weight {
+    font-size: 50px;
+  }
+  
+  .log.btn.btn-success {
+    display: none;
+  }
+  
+  .showImage {
+    width: 80%;
+  }
+  
+  #author-show {
+    font-size: 20px;
+  }
+  
+  #comment-text {
+    font-size: 15px;
+  }
+  
+  #comment-button {
+    display: none;
+  }
+  
+  #second-comment {
+    font-size: 14px;
+  }
+  
+  .date {
+    font-size: 15px;
+  }
+  
+}
+
+
+
+
+@media only screen and (min-width: 484px) {
+  .mobile-login {
+    display: none;
+  }
+  
+  #second-comment {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 556px) {
+  
+  .section-3 h1 {
+    font-size: 31px;
+  }
+  
+  .section-3 h2 {
+    font-size: 21px;
+  }
+  .section-2 h1 {
+    font-size: 31px;
+  }
+  
+  .section-2 h2 {
+    font-size: 21px;
+  }
+  
+  .section-1 #happy {
+    font-size: 25px;
+  }
+  
+  i.fa-weight {
+    font-size: 31px;
+  }
+  
+}
+
+
+@media only screen and (max-width: 992px) {
+  .log.btn.btn-success {
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+  img {
+    width: 75%;
+  }
+  
+}
+
+@media only screen and (min-width: 1200px) {
+  img {
+    width: 60%;
+  }
+}
