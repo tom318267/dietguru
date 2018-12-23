@@ -15,7 +15,8 @@ var commentRoutes = require("./routes/comments");
 var dietRoutes = require("./routes/diet");
 var indexRoutes = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/diet_guru", {useNewUrlParser: true});
+// mongoose.connect("mongodb://localhost/diet_guru", {useNewUrlParser: true});
+mongoose.connect("mongodb://tom318267>:2Ommy1986@ds243084.mlab.com:43084/dietguru", {useNewUrlParser: true});
 mongoose.set("useFindAndModify", false);
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
