@@ -16,9 +16,9 @@ var dietRoutes = require("./routes/diet");
 var indexRoutes = require("./routes/index");
 
 
-mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true});
-// mongoose.connect("mongodb://tom318267:2Ommy1986@ds243084.mlab.com:43084/dietguru", {useNewUrlParser: true});
-process.env.databaseURL
+var url = process.env.DATABASEURL || "mongodb://localhost/diet_guru";
+mongoose.connect(url);
+
 
 mongoose.set("useFindAndModify", false);
 app.set("view engine", "ejs");
