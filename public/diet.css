@@ -329,6 +329,10 @@ footer.container {
   
   .login-form {
     padding-top: 30px;
+    padding-bottom: 120px;
+  }
+  #sign-up-login {
+    font-size: 40px;
   }
 }
 
