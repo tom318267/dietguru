@@ -323,6 +323,10 @@ footer.container {
     padding: 0 15px;
   }
   
+  h1.display-1 {
+    margin-top: -30px;
+  }
+  
 }
 
 
