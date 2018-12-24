@@ -9,9 +9,12 @@
       <img src="http://artoftall.com/wp-content/uploads/2016/05/diet-fruit-vegetable-love.jpg" alt="">
       <h2 id="happy"><i class="fas fa-smile"></i> Healthy is Happy!</h2>
       <div class="mobile-login">
-        <a href="/register"><button class="btn btn-success">Sign Up</button></a>
-        <a href="/login"><button class="btn btn-success">Login</button></a>
-        <a href="/logout"><button class="btn btn-success">Logout</button></a>
+        <% if(!currentUser){ %>
+          <a href="/register"><button class="btn btn-success">Sign Up</button></a>
+          <a href="/login"><button class="btn btn-success">Login</button></a>
+        <% } else { %>
+            <a href="/logout"><button class="btn btn-success">Logout</button></a>
+        <% } %>
       </div>
     </div>
   </div>
