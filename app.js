@@ -19,6 +19,11 @@ var indexRoutes = require("./routes/index");
 var url = process.env.DATABASEURL || "mongodb://localhost/diet_guru";
 mongoose.connect(url, {useNewUrlParser: true});
 
+app.use(function (req, res, next) {
+    res.locals.pageTitle = "DietGuru";
+    next();
+});
+
 
 mongoose.set("useFindAndModify", false);
 app.set("view engine", "ejs");
