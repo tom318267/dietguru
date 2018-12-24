@@ -251,6 +251,10 @@ strong {
   padding-bottom: 100px;
 }
 
+.alert.alert-danger {
+  margin-bottom: 0;
+}
+
 #edit-delete {
   display: inline-flex;
 }
