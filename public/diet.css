@@ -193,7 +193,7 @@ textarea {
 }
 
 .post-results {
-   padding-top: 80px;
+   padding-top: 30px;
    padding-bottom: 30px;
    color: green;
 }
@@ -312,6 +312,15 @@ footer.container {
   
   .date {
     font-size: 15px;
+  }
+  
+  .post-results {
+    font-size: 40px;
+  }
+  
+  .life {
+    font-size: 20px;
+    padding: 0 15px;
   }
   
 }
