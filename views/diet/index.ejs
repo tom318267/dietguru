@@ -9,7 +9,7 @@
     <div class="row text-center">
         <% findPic.forEach(function(pic){ %>
             <div class="col-sm-6 col-md-4">
-                <a href="/diet/<%= pic._id %>"><img src="<%= pic.image %>"></a>
+                <a href="/diet/<%= pic._id %>"><img id="image-index" src="<%= pic.image %>"></a>
                 <h4><%= pic.name %></h4>
             </div>
        <% }); %>

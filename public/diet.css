@@ -290,6 +290,10 @@ footer.container {
     width: 80%;
   }
   
+  #image-index {
+    width: 80%;
+  }
+  
   #author-show {
     font-size: 20px;
   }
