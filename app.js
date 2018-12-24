@@ -17,7 +17,7 @@ var indexRoutes = require("./routes/index");
 
 
 var url = process.env.DATABASEURL || "mongodb://localhost/diet_guru";
-mongoose.connect(url);
+mongoose.connect(url, {useNewUrlParser: true});
 
 
 mongoose.set("useFindAndModify", false);
