@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
@@ -8,7 +10,6 @@ var LocalStrategy = require("passport-local");
 var Diet = require("./models/diet");
 var Comment = require("./models/comment");
 var User = require("./models/user");
-var dotenv = require("dotenv").config();
 var methodOverride = require("method-override");
 
 // requiring routes
@@ -62,6 +63,5 @@ app.use("/diet", dietRoutes);
 
 
 app.listen(process.env.PORT, process.env.IP, function(){
-    console.log(process.env.SECRET_MESSAGE);
-    console.log(process.env.TOKEN);
+    console.log("server running");
 });

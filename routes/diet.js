@@ -20,8 +20,8 @@ var upload = multer({ storage: storage, fileFilter: imageFilter})
 var cloudinary = require('cloudinary');
 cloudinary.config({ 
   cloud_name: 'djso6lywz', 
-  api_key: '984992462265655', 
-  api_secret: 'y9c8MaO_x7OiYHSSnR4CbWO4Eug'
+  api_key: process.env.CLOUDINARY_API_KEY, 
+  api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
 // Index route
@@ -42,22 +42,21 @@ router.get("/new", middleware.isLoggedIn, function(req, res){
 });
 
 // Create route
-router.post("/", middleware.isLoggedIn, function(req, res){
-    var name = req.body.name;
-    var image = req.body.image;
-    var author = {
+router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, res){
+    cloudinary.uploader.upload(req.file.path, function(result) {
+      // add cloudinary url for the image of user object under image property
+      req.body.diet.image = result.secure_url;
+      req.body.diet.author = {
         id: req.user._id,
         username: req.user.username
-    };
-    var newPic = {name: name, image: image, author: author}
-    Diet.create(newPic, function(err, newlyCreated){
-        if(err){
-            res.render("diet/new");
-            console.log(err);
-        } else {
-            console.log(newlyCreated);
-            res.redirect("/diet");
+      };
+      Diet.create(req.body.diet, function(err, newlyCreated) {
+        if (err) {
+          req.flash('error', err.message);
+          return res.redirect('back');
         }
+        res.redirect('/diet/' + req.user._id);
+      });
     });
 });
 
@@ -68,7 +67,7 @@ router.get("/:id", function(req, res){
             console.log(err);
         } else {
              if (!foundPic) {
-                return res.status(400).send("Item not found.")
+                return res.status(400).send("Item not found.");
             }
             res.render("diet/show", {foundPic: foundPic});
         }
