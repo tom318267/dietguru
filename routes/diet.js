@@ -43,6 +43,24 @@ router.get("/new", middleware.isLoggedIn, function(req, res){
 
 // Create route
 router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, res){
+//     var name = req.body.name;
+//     var image = req.body.image;
+//     var author = {
+//         id: req.user._id,
+//         username: req.user.username
+//     };
+//     var newPic = {name: name, image: image, author: author}
+//     Diet.create(newPic, function(err, newlyCreated){
+//         if(err){
+//             res.render("diet/new");
+//             console.log(err);
+//         } else {
+//             console.log(newlyCreated);
+//             res.redirect("/diet");
+//         }
+//     });
+
+
     cloudinary.uploader.upload(req.file.path, function(result) {
       // add cloudinary url for the image of user object under image property
       req.body.diet.image = result.secure_url;
@@ -55,7 +73,7 @@ router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, re
           req.flash('error', err.message);
           return res.redirect('back');
         }
-        res.redirect('/diet/' + req.user._id);
+        res.redirect('/diet/' + newlyCreated.id);
       });
     });
 });
