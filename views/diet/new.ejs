@@ -1,18 +1,25 @@
 <% pageTitle= "Post Results" %>
 <% include ../partials/header %>
 
-<div class="container post-container">
-  <h1 class="results text-center display-4"><i class="fas fa-portrait"></i> Post your Results!</h1>
-  <form action="/diet" method="POST">
-    <div class="form-group">
-      <input type="text" name="name" class="form-control" placeholder="Name">
-    </div>
-    <div class="form-group">
-      <input type="text" name="image" class="form-control" placeholder="Image of Results">
-    </div>
-    <button type="submit" class="btn btn-success btn-block">Submit</button>
-  </form>
-</div>
+      <div class="container post-container text-center">
+          <h1 class="results text-center display-4"><i class="fas fa-portrait"></i> Post Your Results!</h1>
+            <form action="/diet" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form-group text-left">
+                    <label for="image">Image</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-success btn-block">Submit!</button>
+                </div>
+                <a class="go-back" href="/">Go back</a>
+            </form>
+      </div>
+
+    
+      
 
 
 

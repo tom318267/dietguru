@@ -2,6 +2,27 @@ var express = require("express");
 var router = express.Router();
 var Diet = require("../models/diet");
 var middleware = require("../middleware");
+var multer = require('multer');
+var storage = multer.diskStorage({
+  filename: function(req, file, callback) {
+    callback(null, Date.now() + file.originalname);
+  }
+});
+var imageFilter = function (req, file, cb) {
+    // accept image files only
+    if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/i)) {
+        return cb(new Error('Only image files are allowed!'), false);
+    }
+    cb(null, true);
+};
+var upload = multer({ storage: storage, fileFilter: imageFilter})
+
+var cloudinary = require('cloudinary');
+cloudinary.config({ 
+  cloud_name: 'djso6lywz', 
+  api_key: '984992462265655', 
+  api_secret: 'y9c8MaO_x7OiYHSSnR4CbWO4Eug'
+});
 
 // Index route
 router.get("/", function(req, res){

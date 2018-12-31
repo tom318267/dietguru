@@ -166,7 +166,7 @@ nav#foot a:hover {
   padding-bottom: 30px;
 }
 
-#go-back {
+.go-back {
   display: inline-block;
   padding: 10px 0;
   color: orange;
@@ -180,7 +180,8 @@ nav#foot a:hover {
 }
 
 .post-container {
-  padding-bottom: 300px;
+  padding-top: 50px;
+  padding-bottom: 120px;
 }
 
 form {
@@ -193,8 +194,8 @@ textarea {
 }
 
 .post-results {
-   padding-top: 30px;
-   padding-bottom: 30px;
+   padding-top: 50px;
+   padding-bottom: 50px;
    color: green;
 }
 
@@ -248,7 +249,7 @@ strong {
 
 .login-form {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 175px;
 }
 
 .alert.alert-danger {
