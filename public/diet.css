@@ -336,6 +336,15 @@ footer.container {
     font-size: 40px;
   }
   
+  .post-container {
+    padding-top: 0px;
+    padding-bottom: 100px;
+  }
+  
+  .post-container h1.results {
+    font-size: 40px;
+  }
+  
 }
 
 
