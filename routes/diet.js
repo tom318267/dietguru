@@ -42,24 +42,7 @@ router.get("/new", middleware.isLoggedIn, function(req, res){
 });
 
 // Create route
-// router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, res){
 
-//     cloudinary.uploader.upload(req.file.path, function(result) {
-//       // add cloudinary url for the image of user object under image property
-//       req.body.diet.image = result.secure_url;
-//       req.body.diet.author = {
-//         id: req.user._id,
-//         username: req.user.username
-//       };
-//       Diet.create(req.body.diet, function(err, newlyCreated) {
-//         if (err) {
-//           req.flash('error', err.message);
-//           return res.redirect('back');
-//         }
-//         res.redirect('/diet/' + newlyCreated.id);
-//       });
-//     });
-// });
 router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, res) {
     cloudinary.v2.uploader.upload(req.file.path, function(err, result) {
       if(err) {
@@ -115,29 +98,7 @@ router.get("/:id/edit", middleware.checkDietOwnership, function (req, res){
 });
 
 // Update route
-// router.put("/:id", upload.single('image'), middleware.checkDietOwnership, function(req, res){
-//   Diet.findById(req.params.id, function(err, updatedPic){
-//         if(err){
-//             req.flash("error", err.message);
-//             res.redirect("back");
-//         } else {
-//              if(req.file){
-//                 cloudinary.v2.uploader.destroy(diet.imageId, function(err, result){
-//                 if(err){
-//                     req.flash("error", err.message);
-//                     return res.redirect("back");
-//                 }
-//                 cloudinary.v2.uploader.upload(req.file.path, function(err, result){
-//                     if(err){
-//                     req.flash("error", err.message);
-//                     return res.redirect("back");
-//                     }
-//                 });
-//             });
-//             req.flash("success", "Successfully Updated!");
-//             res.redirect("/diet/" + updatedPic._id);
-//     });
-// });
+
 router.put("/:id", upload.single('image'), function(req, res){
     Diet.findById(req.params.id, async function(err, findPic){
         if(err){
@@ -166,12 +127,22 @@ router.put("/:id", upload.single('image'), function(req, res){
 
 // Delete route
 router.delete("/:id", middleware.checkDietOwnership, function(req, res){
-    Diet.findByIdAndRemove(req.params.id, function(err){
+    Diet.findById(req.params.id, async function(err, findPic){
         if(err){
+            req.flash("error", err.message);
+            return res.redirect("back");
+         }
+         try {
+            await cloudinary.v2.uploader.destroy(findPic.imageId);
+            findPic.remove();
+            req.flash("success", "Successfully deleted!");
             res.redirect("/diet");
-        } else {
-            res.redirect("/diet");
-        }
+         } catch(err) {
+             if(err){
+                 req.flash("error", err.message);
+                 return res.redirect("back");
+             }
+         }
     });
 });
 
