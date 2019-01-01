@@ -51,6 +51,12 @@ router.get("/logout", function(req, res){
     res.redirect("/");
 });
 
+// contact form
+router.get("/contact", function(req, res){
+    res.render("contact");
+});
+
+
 // middleware
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
