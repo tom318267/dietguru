@@ -4,6 +4,7 @@ var mongoose = require("mongoose");
 var dietSchema = new mongoose.Schema({
     name: String,
     image: String,
+    imageId: String,
     created: {type: Date, default: Date.now},
     author: {
         id: {
