@@ -27,20 +27,6 @@ app.use(function (req, res, next) {
     next();
 });
 
-var api_key = 'd2c97c9155888c0894a54f37d5ed693d-49a2671e-97f8721b';
-var domain = 'sandbox36438745410943d6b425073ac0cab35c.mailgun.org';
-var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
- 
-var data = {
-  from: 'Excited User <me@samples.mailgun.org>',
-  to: 'serobnic@mail.ru',
-  subject: 'Hello',
-  text: 'Testing some Mailgun awesomeness!'
-};
- 
-mailgun.messages().send(data, function (error, body) {
-  console.log(body);
-});
 
 
 mongoose.set("useFindAndModify", false);
