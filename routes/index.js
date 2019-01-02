@@ -64,24 +64,24 @@ router.get("/contact", function(req, res){
 
 // contact post
 router.post("/contact", function(req, res){
-    var data = {
-  name: req.body.name,
-  from: req.body.email,
-  phone: req.body.phone,
-  subject: req.body.name,
-  to: "ogar318267@gmail.com",
-  text: req.body.message
-  
-};
+        var data = {
+      name: req.body.name,
+      from: req.body.email,
+      phone: req.body.phone,
+      subject: req.body.name,
+      to: "ogar318267@gmail.com",
+      text: req.sanitize(req.body.message)
+      
+    };
  
-mailgun.messages().send(data, function (error, body) {
-    if(error){
-        console.log(error);
-    }
-    console.log(body);
-    req.flash("success", "Message Sent!");
-    return res.redirect("/");
-});
+    mailgun.messages().send(data, function (error, body) {
+        if(error){
+            console.log(error);
+        }
+        console.log(body);
+        req.flash("success", "Message Sent!");
+        return res.redirect("/");
+    });
 });
 
 
