@@ -59,6 +59,10 @@ i.fa-apple-alt {
   color: orange;
 }
 
+.navbar-collapse {
+  text-align: center;
+}
+
 img {
   width: 100%;
 }
