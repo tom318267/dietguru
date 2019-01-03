@@ -63,6 +63,15 @@ i.fa-apple-alt {
   text-align: center;
 }
 
+.navbar-toggler {
+  background: green;
+}
+
+.fa-navicon {
+  color: white;
+}
+
+
 img {
   width: 100%;
 }
