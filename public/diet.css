@@ -69,7 +69,7 @@ i.fa-apple-alt {
 
 .navbar-light .navbar-toggler {
   border-color: green;
-  outline-color: green;
+  outline: none;
 }
 
 img {
