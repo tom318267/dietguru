@@ -345,6 +345,7 @@ footer.container {
     padding-top: 60px;
     padding-bottom: 140px;
   }
+  
   #sign-up-login {
     font-size: 40px;
   }
@@ -364,14 +365,12 @@ footer.container {
 
 
 @media only screen and (min-width: 484px) {
-  .mobile-login {
-    display: none;
-  }
   
   #second-comment {
     display: none;
   }
 }
+
 
 
 @media only screen and (max-width: 556px) {
@@ -413,6 +412,11 @@ footer.container {
   img {
     width: 75%;
   }
+  
+    .mobile-login {
+    display: none;
+  }
+  
   
 }
 
