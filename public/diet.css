@@ -1,5 +1,10 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
+  overflow-x: hidden;
 }
 
 .log.btn.btn-success {
@@ -8,7 +13,6 @@ body {
 
 .container.section-1.text-center {
   padding-top: 50px;
-  overflow: hidden;
 }
 
 h1.text-center.display-1 {
