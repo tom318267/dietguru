@@ -1,6 +1,9 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
-  overflow-x: hidden;
 }
 
 .log.btn.btn-success {
