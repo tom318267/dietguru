@@ -6,6 +6,10 @@ body {
   margin-right: 20px;
 }
 
+.container.section-1.text-center {
+  padding-top: 50px;
+}
+
 h1.text-center.display-1 {
   font-family: 'Quicksand', sans-serif;
   color: green;
