@@ -9,7 +9,6 @@ body {
 .container.section-1.text-center {
   padding-top: 50px;
   overflow: hidden;
-  position: fixed;
 }
 
 h1.text-center.display-1 {
