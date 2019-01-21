@@ -9,11 +9,12 @@
         <% if(currentUser && foundPic.author.id.equals(currentUser._id)){ %>
            <a href="/diet/<%= foundPic._id %>/edit" class="btn btn-success">Edit</a>
        <form id="delete" action="/diet/<%= foundPic._id %>?_method=DELETE" method="POST">
-          <button class="btn btn-danger">Delete</button>  
+          <button id="dialog-confirm" class="btn btn-danger">Delete</button>  
        <% } %>
        
        </form>
     </div>
+    
     <div class="well">
                 <div class="text-right">
                     <a id="comment-button" class="btn btn-success" href="/diet/<%= foundPic._id %>/comments/new"><i class="fas fa-comment-dots"></i> Add Comment</a>
