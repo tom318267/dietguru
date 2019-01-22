@@ -105,7 +105,7 @@ router.put("/:id", upload.single('image'), function(req, res){
             req.flash("error", err.message);
             res.redirect("back");
         } else {
-            if (req.file) {
+    if (req.file) {
                 try{
                     await cloudinary.v2.uploader.destroy(findPic.imageId);
                     var result = await cloudinary.v2.uploader.upload(req.file.path);
@@ -127,7 +127,6 @@ router.put("/:id", upload.single('image'), function(req, res){
 
 // Delete route
 router.delete("/:id", middleware.checkDietOwnership, function(req, res){
-    var confirm = confirm("You sure?");
     Diet.findById(req.params.id, async function(err, findPic){
         if(err){
             req.flash("error", err.message);
