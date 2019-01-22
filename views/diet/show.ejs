@@ -9,9 +9,8 @@
         <% if(currentUser && foundPic.author.id.equals(currentUser._id)){ %>
            <a href="/diet/<%= foundPic._id %>/edit" class="btn btn-success">Edit</a>
        <form id="delete" action="/diet/<%= foundPic._id %>?_method=DELETE" method="POST">
-          <button id="dialog-confirm" class="btn btn-danger">Delete</button>  
+          <button id="dialog-confirm" class="btn btn-danger" onclick="if (!confirm('Are you sure you want to delete <%= foundPic.author.username %>')) { return false }">Delete</button>  
        <% } %>
-       
        </form>
     </div>
     
@@ -27,7 +26,7 @@
                         <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
                                 <a id="edit-button" class="btn btn-sm btn-success" href="/diet/<%= foundPic._id %>/comments/<%= comment._id %>/edit">Edit</a>
                             <form action="/diet/<%= foundPic._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
-                                <button class="btn btn-sm btn-danger">Delete</button>
+                                <button class="btn btn-sm btn-danger" onclick="if (!confirm('Are you sure you want to delete your comment?')) { return false }">Delete</button>
                             </form> 
                          <% } %>
                             </div>

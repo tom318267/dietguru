@@ -44,16 +44,19 @@ router.get("/login", function(req, res){
 // handling login logic
 router.post("/login", passport.authenticate("local", 
     {
-        successRedirect: "/diet/new",
-        failureRedirect: "/login"
+        // successRedirect: "/",
+        failureRedirect: "/login", 
     }), function(req, res){
+        req.flash("success", "Welcome Back " + req.user.username + "!");
+        res.redirect("/");
     
 });
+
 
 // logout route
 router.get("/logout", function(req, res){
     req.logout();
-    req.flash("success", "Logged you out!");
+    req.flash("success", "You have logged out!");
     res.redirect("/");
 });
 

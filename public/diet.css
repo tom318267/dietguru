@@ -186,6 +186,10 @@ nav#foot a:hover {
   color: orange;
 }
 
+.go-back:hover {
+  color: orange;
+}
+
 
 .results {
   padding-top: 50px;

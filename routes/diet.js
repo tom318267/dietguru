@@ -127,6 +127,7 @@ router.put("/:id", upload.single('image'), function(req, res){
 
 // Delete route
 router.delete("/:id", middleware.checkDietOwnership, function(req, res){
+    var confirm = confirm("You sure?");
     Diet.findById(req.params.id, async function(err, findPic){
         if(err){
             req.flash("error", err.message);
@@ -137,7 +138,7 @@ router.delete("/:id", middleware.checkDietOwnership, function(req, res){
             findPic.remove();
             req.flash("success", "Successfully deleted!");
             res.redirect("/diet");
-         } catch(err) {
+        } catch(err) {
              if(err){
                  req.flash("error", err.message);
                  return res.redirect("back");
