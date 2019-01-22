@@ -31,10 +31,12 @@ h1.text-center.display-1 {
 
 .section-2 h2 {
   text-align: center;
+  font-size: 26px;
 }
 
 .section-3 h2 {
   text-align: left;
+  font-size: 26px;
 }
 
 .steps {
