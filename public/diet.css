@@ -288,6 +288,13 @@ footer.container {
   width: 100%;
 }
 
+@media only screen and (max-width: 368px) {
+  .social {
+    font-size: 26px;
+    margin-left: 18px;
+  }
+}
+
 
 
 @media only screen and (max-width: 484px) {
