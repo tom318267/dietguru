@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   overflow-x: hidden;
 }
 
@@ -16,7 +16,7 @@ body {
 }
 
 h1.text-center.display-1 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: green;
 }
 
@@ -48,7 +48,7 @@ h1.text-center.display-1 {
 }
 
 .bg-light {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
 
 i.fa-apple-alt {
@@ -60,6 +60,7 @@ i.fa-apple-alt {
 .navbar-light .navbar-nav .nav-link {
   color: green;
   font-size: 20px;
+  margin-right: 30px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
@@ -91,16 +92,14 @@ h2 {
 }
 
 .section-3.text-center {
-  background: #FFA10D;
+  background: #ffa10d;
   color: white;
   padding: 50px;
 }
 
-
 nav {
   padding: 50px;
 }
-
 
 li {
   display: block;
@@ -138,7 +137,7 @@ nav {
 }
 
 nav#foot a {
- color: green;
+  color: green;
 }
 
 nav#foot a:hover {
@@ -192,7 +191,6 @@ nav#foot a:hover {
   color: orange;
 }
 
-
 .results {
   padding-top: 50px;
   padding-bottom: 30px;
@@ -214,9 +212,9 @@ textarea {
 }
 
 .post-results {
-   padding-top: 50px;
-   padding-bottom: 20px;
-   color: green;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  color: green;
 }
 
 .results-div {
@@ -280,141 +278,128 @@ strong {
   display: inline-flex;
 }
 
-
-
 footer.container {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-
-
 @media only screen and (max-width: 484px) {
   h1.text-center.display-1 {
     font-size: 70px;
   }
-  
+
   i.fa-apple-alt {
     font-size: 50px;
   }
-  
+
   i.fa-weight {
     font-size: 50px;
   }
-  
+
   .log.btn.btn-success {
     display: none;
   }
-  
+
   .showImage {
     width: 80%;
   }
-  
+
   #image-index {
     width: 80%;
   }
-  
+
   #author-show {
     font-size: 20px;
   }
-  
+
   #comment-text {
     font-size: 15px;
   }
-  
+
   #comment-button {
     display: none;
   }
-  
+
   #second-comment {
     font-size: 14px;
   }
-  
+
   .date {
     font-size: 15px;
   }
-  
+
   .post-results {
     font-size: 40px;
   }
-  
+
   .life {
     font-size: 20px;
     padding: 0 15px;
   }
-  
+
   h1.display-1 {
     margin-top: -30px;
   }
-  
+
   .login-form {
     padding-top: 60px;
     padding-bottom: 140px;
   }
-  
+
   #sign-up-login {
     font-size: 40px;
   }
-  
+
   .post-container {
     padding-top: 0px;
     padding-bottom: 100px;
   }
-  
+
   .post-container h1.results {
     font-size: 40px;
   }
-  
+
   .social {
     font-size: 26px;
     margin-left: 18px;
   }
 }
 
-
-
-
 @media only screen and (min-width: 484px) {
-  
   #second-comment {
     display: none;
   }
 }
 
-
-
 @media only screen and (max-width: 556px) {
-  
   .section-3 h1 {
     font-size: 30px;
   }
-  
+
   .section-3 h2 {
     font-size: 18px;
   }
   .section-2 h1 {
     font-size: 30px;
   }
-  
+
   .section-2 h2 {
     font-size: 18px;
   }
-  
+
   .section-1 #happy {
     font-size: 25px;
   }
-  
+
   i.fa-weight {
     font-size: 31px;
   }
-  
-  .navbar-collapse {
-  text-align: center;
-}
-  
-}
 
+  .navbar-collapse {
+    text-align: center;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   .log.btn.btn-success {
@@ -422,17 +407,14 @@ footer.container {
   }
 }
 
-
 @media only screen and (min-width: 992px) {
   img {
     width: 75%;
   }
-  
-    .mobile-login {
+
+  .mobile-login {
     display: none;
   }
-  
-  
 }
 
 @media only screen and (min-width: 1200px) {
